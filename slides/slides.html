@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>A STATISTICAL MODEL OF CRIMINAL BEHAVIOR</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Group1 Andrea, Jonas, Thomas" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="libs/footer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# A STATISTICAL MODEL OF CRIMINAL BEHAVIOR
+]
+.subtitle[
+## in Computational Modelling of Social Systems
+]
+.author[
+### Group1
+Andrea, Jonas, Thomas
+]
+.date[
+### 20.06.2022
+]
+
+---
+
+
+
+
+
+layout: true
+
+&lt;div class="my-footer"&gt;&lt;span&gt;Group 1 - Computational Modelling of Social Systems&lt;/span&gt;&lt;/div&gt; 
+
+---
+
+# Overview
+
+## 1. Introduction
+## 2. Model
+## 3. Different Outcomes
+## 4. Resumee
+## 5. Limitations
+---
+# Introduction
+
+The model is based on the paper ["A STATISTICAL MODEL OF CRIMINAL BEHAVIOR" by M. B. Short, M. R. D'Orsogna, V.B. Pasour, G. E. Tita, P.J. Brantingham, A.L. Pertozzi and L.B. Chayes published in Mathematical Models and Methods in Applied Sciences
+Vol. 18, Suppl. (2008) 1249–1267](https://www.math.ucla.edu/~bertozzi/papers/M3AS-final.pdf)
+---
+# Theory Background
+
+The attractiveness of a house to be victimized is based on two assumptions:
+
+- repeat and near-repeat victimization
+- broken windows effect
+
+`$$A_s(t) = A_s^0 + B_s(t)$$`
+
+---
+# Model
+
+- MultiGrid with size 50 x 50 (original 128 x 128)
+- Uniform distribution of attractiveness
+- Burglars tend to "walk" towards more attractive houses
+-  Central Parameters
+  - `\(\eta\)` - Measures neighborhood effect [0 - 1]
+  - `\(\theta\)` - Dynamic increase of attractiveness
+  - `\(\Gamma\)` - Rate of burglar generation at each site
+
+---
+# Model Flowchart
+&lt;img src="figures/flowchart.png" width="950" style="display: block; margin: auto;" /&gt;
+---
+# Different Outcomes
+## 1. Spatical homogeneity
+## 2. Dynamic hotspots
+## 3. Stationary hotspots
+---
+
+# 1. Spatical homogenity
+
+
+.pull-left[
+&lt;img src="figures/spatical_homogenity_orig.png" width="350" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+]
+.center[
+Parameters: `\(\eta\)` = 0.2, `\(\theta\)` = 0.56 and `\(\Gamma\)` = 0.019
+]
+---
+
+# 2. Dynamic hotspots
+
+.pull-left[
+&lt;img src="figures/dynamic_hotspots_orig.png" width="350" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+]
+.center[
+Parameters: `\(\eta\)` = 0.2, `\(\theta\)` = 5.6 and `\(\Gamma\)` = 0.002
+]
+---
+
+# 3. Stationary hotspots
+
+.pull-left[
+&lt;img src="figures/stationary_hotspots_orig.png" width="350" style="display: block; margin: auto;" /&gt;
+]
+.pull-right[
+]
+.center[
+Parameters: `\(\eta\)` = 0.03, `\(\theta\)` = 0.56 and `\(\Gamma\)` = 0.019
+]
+---
+# Resumee
+
+- 
+
+
+---
+# Limitations
+
+- No presence of police forces
+- No model for the attractiveness of houses (all uniform)
+  - Would be a villa more or less attractive?
+- All burglars behave in the same manner
+  - Are there different kinds of burglars in reality?
+---
+.center[
+# Thank you for your attention
+]
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="libs/perc.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "16:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

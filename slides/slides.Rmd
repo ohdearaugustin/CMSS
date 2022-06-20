@@ -1,0 +1,143 @@
+---
+title: "A STATISTICAL MODEL OF CRIMINAL BEHAVIOR"
+subtitle: "in Computational Modelling of Social Systems"
+author: "Group1 \nAndrea, Jonas, Thomas"
+date: "20.06.2022"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs 
+    css: [xaringan-themer.css, "libs/footer.css"]
+    nature:
+      beforeInit: ["libs/perc.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: "16:9"
+---
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+#This block contains the theme configuration for the CSS lab slides style
+library(xaringanthemer)
+library(showtext)
+style_mono_accent(
+  base_color = "#5c5c5c",
+  text_font_size = "1.5rem",
+  header_font_google = google_font("Arial"),
+  text_font_google   = google_font("Arial", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+layout: true
+
+<div class="my-footer"><span>Group 1 - Computational Modelling of Social Systems</span></div> 
+
+---
+
+# Overview
+
+## 1. Introduction
+## 2. Model
+## 3. Different Outcomes
+## 4. Resumee
+## 5. Limitations
+---
+# Introduction
+
+The model is based on the paper ["A STATISTICAL MODEL OF CRIMINAL BEHAVIOR" by M. B. Short, M. R. D'Orsogna, V.B. Pasour, G. E. Tita, P.J. Brantingham, A.L. Pertozzi and L.B. Chayes published in Mathematical Models and Methods in Applied Sciences
+Vol. 18, Suppl. (2008) 1249–1267](https://www.math.ucla.edu/~bertozzi/papers/M3AS-final.pdf)
+---
+# Theory Background
+
+The attractiveness of a house to be victimized is based on two assumptions:
+
+- repeat and near-repeat victimization
+- broken windows effect
+
+$$A_s(t) = A_s^0 + B_s(t)$$
+
+---
+# Model
+
+- MultiGrid with size 50 x 50 (original 128 x 128)
+- Uniform distribution of attractiveness
+- Burglars tend to "walk" towards more attractive houses
+-  Central Parameters
+  - $\eta$ - Measures neighborhood effect [0 - 1]
+  - $\theta$ - Dynamic increase of attractiveness
+  - $\Gamma$ - Rate of burglar generation at each site
+
+---
+# Model Flowchart
+```{r, echo=FALSE, out.width=950, fig.align='center'}
+knitr::include_graphics("figures/flowchart.png")
+```
+---
+# Different Outcomes
+## 1. Spatical homogeneity
+## 2. Dynamic hotspots
+## 3. Stationary hotspots
+---
+
+# 1. Spatical homogenity
+
+
+.pull-left[
+```{r, echo=FALSE, out.width=350, fig.align='center'}
+knitr::include_graphics("figures/spatical_homogenity_orig.png")
+```
+]
+.pull-right[
+]
+.center[
+Parameters: $\eta$ = 0.2, $\theta$ = 0.56 and $\Gamma$ = 0.019
+]
+---
+
+# 2. Dynamic hotspots
+
+.pull-left[
+```{r, echo=FALSE, out.width=350, fig.align='center'}
+knitr::include_graphics("figures/dynamic_hotspots_orig.png")
+```
+]
+.pull-right[
+]
+.center[
+Parameters: $\eta$ = 0.2, $\theta$ = 5.6 and $\Gamma$ = 0.002
+]
+---
+
+# 3. Stationary hotspots
+
+.pull-left[
+```{r, echo=FALSE, out.width=350, fig.align='center'}
+knitr::include_graphics("figures/stationary_hotspots_orig.png")
+```
+]
+.pull-right[
+]
+.center[
+Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
+]
+---
+# Resumee
+
+- 
+
+
+---
+# Limitations
+
+- No presence of police forces
+- No model for the attractiveness of houses (all uniform)
+  - Would be a villa more or less attractive?
+- All burglars behave in the same manner
+  - Are there different kinds of burglars in reality?
+---
+.center[
+# Thank you for your attention
+]
