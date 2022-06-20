@@ -8,4 +8,4 @@ You can download the ipython file and execute it your own environment (jypyther,
 
 # Slides
 
-The slides of our presentation are created with [xaringan](https://github.com/yihui/xaringan) and can be found [here]([[Slides]](https://ohdearaugustin.github.io/CMSS/slides/slides.html) 
+The slides of our presentation are created with [xaringan](https://github.com/yihui/xaringan) and can be found [here](https://ohdearaugustin.github.io/CMSS/slides/slides.html) 
