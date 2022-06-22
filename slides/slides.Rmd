@@ -42,8 +42,7 @@ layout: true
 ## 1. Introduction
 ## 2. Model
 ## 3. Different Outcomes
-## 4. Resumee
-## 5. Limitations
+## 4. Limitations/Resume
 ---
 # Introduction: 'Burglary Model'
 
@@ -143,7 +142,7 @@ knitr::include_graphics("figures/dynamic_hotspots_orig.png")
 ```
 ]
 .pull-right[
-```{r, echo=FALSE, out.width=350, fig.align='center'}
+```{r, echo=FALSE, out.width=400, fig.align='center'}
 knitr::include_graphics("figures/dynamic_hotspots.gif")
 ```
 ]
@@ -168,13 +167,7 @@ knitr::include_graphics("figures/stationary.gif")
 Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
 ]
 ---
-# Resumee
-
-- 
-
-
----
-# Limitations
+# Limitations/Resume
 
 - No presence of police forces and/or bystanders
 - No model for the attractiveness of houses (all uniform)
