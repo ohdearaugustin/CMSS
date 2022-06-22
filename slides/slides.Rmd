@@ -97,11 +97,12 @@ $$A_s(t) = A_s^0 + B_s(t)$$
 ```{r, echo=FALSE, out.width=950, fig.align='center'}
 knitr::include_graphics("figures/flowchart.png")
 ```
-
+---
 --- 
+
 # Divergence from the original model
 
-The originial paper showed discrepancies regarding burglar generation:
+The original paper showed discrepancies regarding burglar generation:
 - Argumentation about "broken-windows-effect" and 
   re-generation at **site of burglary**
 - Constant burglar generation at rate $\Gamma$ at **each lattice site**
