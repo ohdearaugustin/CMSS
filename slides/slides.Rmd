@@ -6,7 +6,7 @@ date: "20.06.2022"
 output:
   xaringan::moon_reader:
     lib_dir: libs 
-    css: [xaringan-themer.css, "libs/footer.css"]
+    css: [xaringan-themer.css, "libs/footer.css", "libs/custom.css"]
     nature:
       beforeInit: ["libs/perc.js"]
       highlightStyle: github
@@ -45,17 +45,39 @@ layout: true
 ## 4. Resumee
 ## 5. Limitations
 ---
-# Introduction
+# Introduction: 'Burglary Model'
 
-The model is based on the paper ["A STATISTICAL MODEL OF CRIMINAL BEHAVIOR" by M. B. Short, M. R. D'Orsogna, V.B. Pasour, G. E. Tita, P.J. Brantingham, A.L. Pertozzi and L.B. Chayes published in Mathematical Models and Methods in Applied Sciences
-Vol. 18, Suppl. (2008) 1249–1267](https://www.math.ucla.edu/~bertozzi/papers/M3AS-final.pdf)
+- Based on the paper [Short et. al. (2008): "A Statistical Model of Criminal Behavior" ](https://www.math.ucla.edu/~bertozzi/papers/M3AS-final.pdf)
+- Emergence, dynamics, and steady-state properties of crime hotspots
+- Empirical observation: spatio-temporal clusters of crime
+  - **Spatial correlations**: high crime rate in certain areas
+  - **Temporal correlations**: repeated targeting
+- Question: what drives the emergence of different burglary patterns that result in 'crime hotspots'?
+
+```{r, echo=FALSE, out.width=200, fig.align='center'}
+knitr::include_graphics("figures/hotspots.png")
+```
+
+
 ---
-# Theory Background
+# Theoretical Background
+
+- "Broken Windows Theory", [Wilson & Kelling (1982)](https://media4.manhattan-institute.org/pdf/_atlantic_monthly-broken_windows.pdf)
+- Crime is more likely to happen in areas, where it has already happend
+- A broken window lowers the threshold to break more windows
+- Criticism: biased observations, focus on symptoms rather than causes & negligence of systematic discrimination/disintegration
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+#,fig.cap="Scott Webb | www.pexels.com"
+knitr::include_graphics("figures/broken.jpg")
+```
+
+---
+# Model Assumptions
 
 The attractiveness of a house to be victimized is based on two assumptions:
 
 - repeat and near-repeat victimization
-- broken windows effect
+- "Broken Windows Theory"
 
 $$A_s(t) = A_s^0 + B_s(t)$$
 
