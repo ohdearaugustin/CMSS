@@ -57,7 +57,7 @@ layout: true
 ```{r, echo=FALSE, out.width=200, fig.align='center'}
 knitr::include_graphics("figures/hotspots.png")
 ```
-
+.center[<small>Hotspots | Short et. al. (2008)</small>]
 
 ---
 # Theoretical Background
@@ -70,7 +70,7 @@ knitr::include_graphics("figures/hotspots.png")
 #,fig.cap="Scott Webb | www.pexels.com"
 knitr::include_graphics("figures/broken.jpg")
 ```
-
+.center[<small>Scott Webb | www.pexels.com</small>]
 ---
 # Model Assumptions
 
