@@ -97,6 +97,21 @@ $$A_s(t) = A_s^0 + B_s(t)$$
 ```{r, echo=FALSE, out.width=950, fig.align='center'}
 knitr::include_graphics("figures/flowchart.png")
 ```
+
+--- 
+# Divergence from the original model
+
+The originial paper showed discrepancies regarding burglar generation:
+- Argumentation about "broken-windows-effect" and 
+  re-generation at **site of burglary**
+- Constant burglar generation at rate $\Gamma$ at **each lattice site**
+
+**Our Solution:**
+- Certain number of (potential) burglars is initialized
+- Others initialized at random moment to avoid peaks and troughs in activity
+- If burglary is committed, burglar vanishes and re-appears 
+  at site of burglary based on rate $\Gamma$
+
 ---
 # Different Outcomes
 ## 1. Spatical homogeneity
@@ -104,7 +119,7 @@ knitr::include_graphics("figures/flowchart.png")
 ## 3. Stationary hotspots
 ---
 
-# 1. Spatical homogenity
+# 1. Spatial homogenity
 
 
 .pull-left[
@@ -127,6 +142,9 @@ knitr::include_graphics("figures/dynamic_hotspots_orig.png")
 ```
 ]
 .pull-right[
+```{r, echo=FALSE, out.width=350, fig.align='center'}
+knitr::include_graphics("figures/dynamic_hotspots.gif")
+```
 ]
 .center[
 Parameters: $\eta$ = 0.2, $\theta$ = 5.6 and $\Gamma$ = 0.002
@@ -157,9 +175,10 @@ Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
 ---
 # Limitations
 
-- No presence of police forces
+- No presence of police forces and bystanders
 - No model for the attractiveness of houses (all uniform)
   - Would be a villa more or less attractive?
+  - Are certain neighborhoods more prone to burglary?
 - All burglars behave in the same manner
   - Are there different kinds of burglars in reality?
 ---
