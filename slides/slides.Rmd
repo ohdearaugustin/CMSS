@@ -114,7 +114,7 @@ The originial paper showed discrepancies regarding burglar generation:
 
 ---
 # Different Outcomes
-## 1. Spatical homogeneity
+## 1. Spatial homogeneity
 ## 2. Dynamic hotspots
 ## 3. Stationary hotspots
 ---
@@ -175,7 +175,7 @@ Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
 ---
 # Limitations
 
-- No presence of police forces and bystanders
+- No presence of police forces and/or bystanders
 - No model for the attractiveness of houses (all uniform)
   - Would be a villa more or less attractive?
   - Are certain neighborhoods more prone to burglary?

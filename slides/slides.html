@@ -92,14 +92,31 @@ The attractiveness of a house to be victimized is based on two assumptions:
 ---
 # Model Flowchart
 &lt;img src="figures/flowchart.png" width="950" style="display: block; margin: auto;" /&gt;
+
+--- 
+# Divergence from the original model
+
+The originial paper showed discrepancies regarding burglar generation:
+- Argumentation about "broken-windows-effect" and 
+  re-generation at **site of burglary**
+- Constant burglar generation at rate $\Gamma$ at **each lattice site**
+
+**Our Solution:**
+- Certain number of (potential) burglars is initialized
+- Others initialized at random moment to avoid peaks and troughs in activity
+- If burglary is committed, burglar vanishes and re-appears 
+  at site of burglary based on rate $\Gamma$
+
 ---
 # Different Outcomes
-## 1. Spatical homogeneity
+## 1. Spatial homogeneity
 ## 2. Dynamic hotspots
 ## 3. Stationary hotspots
+
+
 ---
 
-# 1. Spatical homogenity
+# 1. Spatial homogenity
 
 
 .pull-left[
@@ -118,6 +135,7 @@ Parameters: `\(\eta\)` = 0.2, `\(\theta\)` = 0.56 and `\(\Gamma\)` = 0.019
 &lt;img src="figures/dynamic_hotspots_orig.png" width="350" style="display: block; margin: auto;" /&gt;
 ]
 .pull-right[
+&lt;img src="figures/dynamic_hotspots.gif" width="350" style="display: block; margin: auto;" /&gt;
 ]
 .center[
 Parameters: `\(\eta\)` = 0.2, `\(\theta\)` = 5.6 and `\(\Gamma\)` = 0.002
@@ -144,9 +162,10 @@ Parameters: `\(\eta\)` = 0.03, `\(\theta\)` = 0.56 and `\(\Gamma\)` = 0.019
 ---
 # Limitations
 
-- No presence of police forces
+- No presence of police forces and/or bystanders
 - No model for the attractiveness of houses (all uniform)
   - Would be a villa more or less attractive?
+  - Are certain neighborhoods more prone to burglary?
 - All burglars behave in the same manner
   - Are there different kinds of burglars in reality?
 ---
