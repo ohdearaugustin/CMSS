@@ -128,6 +128,9 @@ knitr::include_graphics("figures/spatical_homogenity_orig.png")
 ```
 ]
 .pull-right[
+```{r, echo=FALSE, out.width=400, fig.align='center'}
+knitr::include_graphics("figures/spatial.gif")
+```
 ]
 .center[
 Parameters: $\eta$ = 0.2, $\theta$ = 0.56 and $\Gamma$ = 0.019
