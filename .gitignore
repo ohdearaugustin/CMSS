@@ -129,3 +129,6 @@ dmypy.json
 .pyre/
 
 slides/.Rhistory
+.Rhistory
+.DS_Store
+slides/.DS_Store
