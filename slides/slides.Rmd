@@ -168,11 +168,11 @@ Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
 - Negligence of barriers/hindrances
   - No presence of police forces
   - No security/surveillance infrastructure
-- No model for the attractiveness of houses (all uniform)
+- Spatially uniform value for static attractiveness
   - Would an expensive property be more or less attractive?
-- Uniform density of houses
+- Spatially uniform density of houses
 - All burglars behave in the same manner
-  - Are there different kinds of burglars in reality?
+  - Different kinds of burglars in reality?
 ---
 .center[
 # Thank you for your attention
