@@ -69,21 +69,19 @@ layout: true
 &lt;img src="figures/broken.jpg" width="400" style="display: block; margin: auto;" /&gt;
 .center[&lt;small&gt;Scott Webb | www.pexels.com&lt;/small&gt;]
 ---
-# Model Assumptions
-
-The attractiveness of a house to be victimized is based on two assumptions:
-
-- Repeat and near-repeat victimization
-- "Broken Windows Theory"
+# Model Assumptions: Agents
+- 2 types of agents: Houses and Burglars
+- The attractiveness of a **house** to be victimized is based on two assumptions:
+  - Repeat and near-repeat victimization
+  - "Broken Windows Theory"
 
 `$$A_s(t) = A_s^0 + B_s(t)$$`
-
+- **Burglars** decide at every step: break in vs. move on
+- They tend to "walk" towards more attractive houses ("biased random walk")
 ---
 # Model
 
 - MultiGrid with size 50 x 50 (original 128 x 128)
-- Uniform distribution of attractiveness
-- Burglars tend to "walk" towards more attractive houses
 -  Central Parameters
   - `\(\eta\)` - Measures neighborhood effect [0 - 1]
   - `\(\theta\)` - Dynamic increase of attractiveness
