@@ -2,7 +2,7 @@
 title: "A STATISTICAL MODEL OF CRIMINAL BEHAVIOR"
 subtitle: "in Computational Modelling of Social Systems"
 author: "Group1 \nAndrea, Jonas, Thomas"
-date: "20.06.2022"
+date: "23.06.2022"
 output:
   xaringan::moon_reader:
     lib_dir: libs 
