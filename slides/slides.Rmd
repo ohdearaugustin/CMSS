@@ -99,12 +99,12 @@ knitr::include_graphics("figures/flowchart.png")
 ```
 ---
 # Different Outcomes
-## 1. Spatical homogeneity
+## 1. Spatial homogeneity
 ## 2. Dynamic hotspots
 ## 3. Stationary hotspots
 ---
 
-# 1. Spatical homogenity
+# 1. Spatial homogenity
 
 
 .pull-left[
@@ -160,7 +160,7 @@ Parameters: $\eta$ = 0.03, $\theta$ = 0.56 and $\Gamma$ = 0.019
 - Model generates nonlinear feedback loops which originate patterns of aggregation
 - Qualitative similarity to empirical observations of 'crime hotspots'
   - Better understanding of why and how hotspots form
-  - Better understandinf of underlying dynamics
+  - Better understanding of underlying dynamics
 
 
 ---
