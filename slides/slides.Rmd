@@ -63,8 +63,8 @@ knitr::include_graphics("figures/hotspots.png")
 # Theoretical Background
 
 - "Broken Windows Theory", [Wilson & Kelling (1982)](https://media4.manhattan-institute.org/pdf/_atlantic_monthly-broken_windows.pdf)
-- Crime is more likely to occur in those areas where it has already occurred
-- A "broken window" lowers the threshold to break more windows
+- Crime is more likely to occur in areas where it has already occurred
+- A "broken window" lowers the threshold to break further windows
 - Criticism: biased observations, focus on symptoms rather than causes & negligence of systematic discrimination/disintegration
 ```{r, echo=FALSE, out.width=400, fig.align='center'}
 knitr::include_graphics("figures/broken.jpg")
